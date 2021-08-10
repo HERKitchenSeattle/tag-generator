@@ -1,0 +1,17 @@
+.options {
+  padding: 20px;
+}
+.mat-card {
+  width: 300px;
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+  .mat-card-content,
+  .mat-card-actions {
+    margin: 16px;
+  }
+}
+@media print {
+  .options {
+    display: none;
+  }
+}
