@@ -1,6 +1,8 @@
 # HER Kitchen Tag Generator
 
-A tag generator for HER Kitchen
+A tag generator for HER Kitchen.
+
+This page is live at https://herk-tags.web.app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 

@@ -10,6 +10,8 @@ export class AppComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}
   titleVal!: string;
   subtitleVal!: string;
+  numOfTags!: number;
+  selected = 'basic-tag';
   printPage(): void {
     window.print();
   }

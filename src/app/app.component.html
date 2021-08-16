@@ -15,6 +15,10 @@
         <mat-label>Subtitle</mat-label>
         <input matInput [(ngModel)]="subtitleVal" />
       </mat-form-field>
+      <mat-form-field color="primary">
+        <mat-label>Number of Tags</mat-label>
+        <input type="number" matInput [(ngModel)]="numOfTags" />
+      </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
       <button color="primary" mat-flat-button (click)="printPage()">
@@ -22,5 +26,30 @@
       </button>
     </mat-card-actions>
   </mat-card>
+  <mat-chip-list>
+    <mat-chip
+      [selected]="selected === 'basic-tag'"
+      (click)="selected = 'basic-tag'"
+    >
+      Basic Tag
+    </mat-chip>
+    <mat-chip
+      [selected]="selected === 'double-height-tag'"
+      (click)="selected = 'double-height-tag'"
+    >
+      Double Height Tag
+    </mat-chip>
+  </mat-chip-list>
 </div>
-<app-basic-tag [title]="titleVal" [subtitle]="subtitleVal"></app-basic-tag>
+<app-basic-tag
+  *ngIf="selected === 'basic-tag'"
+  [title]="titleVal"
+  [numOfTags]="numOfTags"
+  [subtitle]="subtitleVal"
+></app-basic-tag>
+<app-double-height-tag
+  [title]="titleVal"
+  [numOfTags]="numOfTags"
+  [subtitle]="subtitleVal"
+  *ngIf="selected === 'double-height-tag'"
+></app-double-height-tag>

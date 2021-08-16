@@ -37,6 +37,12 @@
           },
           "configurations": {
             "production": {
+              "buildOptimizer": true,
+              "optimization": true,
+              "sourceMap": true,
+              "namedChunks": true,
+              "aot": true,
+
               "budgets": [
                 {
                   "type": "initial",

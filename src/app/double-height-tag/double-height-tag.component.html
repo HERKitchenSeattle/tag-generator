@@ -1,0 +1,31 @@
+<main class="basic-tag grid">
+  <div class="tag" *ngFor="let tag of tags">
+    <div class="desc">
+      <p class="title">
+        <strong
+          >{{ tag.title }}
+          <span *ngIf="!tag.title" style="text-align: center">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use code
+            &nbsp;&nbsp;&nbsp;"<span style="color: #9f113a">HERKITCHEN</span>"
+            at checkout and get 15% &nbsp;&nbsp;&nbsp;off your first order</span
+          ></strong
+        >
+      </p>
+      <p class="subtitle">{{ tag.subtitle }}</p>
+    </div>
+    <div class="brand">
+      <div class="logo">
+        <img
+          style="margin-top: -30px"
+          height="64"
+          src="../../assets/HER kitchen (Maroon & Orange).png"
+        />
+      </div>
+      <div class="slogan">
+        <p [ngStyle]="{ 'text-align': 'center' }">
+          Vegan, Gluten <br />& Soy Free
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
